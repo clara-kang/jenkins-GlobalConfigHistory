@@ -15,12 +15,14 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * methods taken from jobConfigHistory plugin.
  */
 public class FileHistoryDao extends GlobalConfigHistoryStrategy{
 
+    private static final Logger LOG = Logger.getLogger(FileHistoryDao.class.getName());
     private final File historyRootDir;
     private final File jenkinsHome;
 
@@ -31,19 +33,6 @@ public class FileHistoryDao extends GlobalConfigHistoryStrategy{
     FileHistoryDao(final File historyRootDir, final File jenkinsHome){
         this.historyRootDir = historyRootDir;
         this.jenkinsHome = jenkinsHome;
-    }
-
-  static File createNewHistoryDir(final File itemHistoryDir, final AtomicReference<Calendar> timestampHolder) {
-        Calendar timestamp;
-        File f;
-        timestamp = new GregorianCalendar();
-        f = new File(itemHistoryDir, new SimpleDateFormat("yyyy-MM-DD_HH-mm-ss").format(timestamp.getTime()));
-        timestampHolder.set(timestamp);
-
-        if (!(f.mkdirs() || f.exists())) {
-            throw new RuntimeException("Could not create rootDir " + f);
-        }
-        return f;
     }
 
     File getHistoryDir(final File configFile){
@@ -58,16 +47,21 @@ public class FileHistoryDao extends GlobalConfigHistoryStrategy{
         return historyDir;
     }
 
-    File getRootDir(final XmlFile xmlFile, final AtomicReference<Calendar> timestampHolder){
+    File getRootDir(final XmlFile xmlFile){
         final File configFile = xmlFile.getFile();
         final File itemHistoryDir = getHistoryDir(configFile);
-        return createNewHistoryDir(itemHistoryDir, timestampHolder);
+
+        if (!(itemHistoryDir.mkdirs() || itemHistoryDir.exists())) {
+            throw new RuntimeException("Could not create rootDir ");
+        }
+
+        return itemHistoryDir;
     }
 
-    static void copyConfigFile(final File currentConfig, final File timestampedDir) throws FileNotFoundException,
+    static void copyConfigFile(final File currentConfig, final File directory) throws FileNotFoundException,
             IOException {
         final BufferedOutputStream configCopy = new BufferedOutputStream(
-                new FileOutputStream(new File(timestampedDir, currentConfig.getName())));
+                new FileOutputStream(new File(directory, currentConfig.getName())));
         try {
             final FileInputStream configOriginal = new FileInputStream(currentConfig);
             try {
@@ -80,18 +74,40 @@ public class FileHistoryDao extends GlobalConfigHistoryStrategy{
         }
     }
 
-    public void saveItem(final XmlFile file){
+    boolean checkForDuplicate(final XmlFile currentConfig, final File directory){
+        int numberOfFiles = directory.listFiles().length;
+
+        if(numberOfFiles == 0){
+            return true;
+        }
+        else if(numberOfFiles == 1){
+            final File old = directory.listFiles()[0];
+            final XmlFile oldXml = new XmlFile(old);
+            try{
+                return !oldXml.asString().equals(currentConfig.asString());
+            }catch (IOException e){
+                LOG.log(Level.WARNING, "unable to check for duplicate");
+            }
+        }
+        else{
+            LOG.log(Level.WARNING, "only 1 file may exist in a directory");
+        }
+        return false;
+    }
+
+    public boolean saveItem(final XmlFile file){
         try{
-            final AtomicReference<Calendar> timestampHolder = new AtomicReference<Calendar>();
-            final File timestampedDir = getRootDir(file, timestampHolder);
-            copyConfigFile(file.getFile(), timestampedDir);
+            final File dir = getRootDir(file);
+            if(checkForDuplicate(file,dir)){
+                copyConfigFile(file.getFile(), dir);
+                return true;
+            }
+            else{
+                return false;
+            }
         }catch (IOException e){
             throw new RuntimeException("Unable to copy" + file, e);
         }
-
-
     }
-
-
 
 }
