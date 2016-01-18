@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Built-By: ehenkan
+Created-By: Apache Maven
+Build-Jdk: 1.8.0_66
+Extension-Name: globalConfigHistory
+Specification-Title: TODO
+Implementation-Title: globalConfigHistory
+Implementation-Version: 1.0-SNAPSHOT
+Plugin-Class: com.mycompany.apps.globalConfigHistory.GlobalConfigHistory
+Group-Id: com.mycompany.apps
+Short-Name: globalConfigHistory
+Long-Name: TODO Plugin
+Url: https://wiki.jenkins-ci.org/display/JENKINS/TODO+Plugin
+Plugin-Version: 1.0-SNAPSHOT (private-01/18/2016 13:28-ehenkan)
+Hudson-Version: 1.580.1
+Jenkins-Version: 1.580.1
+Plugin-Developers: 
+
