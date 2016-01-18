@@ -71,7 +71,6 @@ public class FileHistoryDao extends GlobalConfigHistoryStrategy{
         try {
             final FileInputStream configOriginal = new FileInputStream(currentConfig);
             try {
-                // in is buffered by copyStream.
                 Util.copyStream(configOriginal, configCopy);
             } finally {
                 configOriginal.close();
