@@ -75,12 +75,11 @@ public class FileHistoryDao extends GlobalConfigHistoryStrategy{
     }
 
     boolean checkForDuplicate(final XmlFile currentConfig, final File directory){
-        int numberOfFiles = directory.listFiles().length;
 
-        if(numberOfFiles == 0){
+        if(directory.listFiles() == null){
             return true;
         }
-        else if(numberOfFiles == 1){
+        else if(directory.listFiles().length == 1){
             final File old = directory.listFiles()[0];
             final XmlFile oldXml = new XmlFile(old);
             try{
