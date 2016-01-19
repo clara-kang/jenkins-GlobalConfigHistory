@@ -7,10 +7,10 @@ import java.util.*;
 public class InjectedTest extends junit.framework.TestCase {
   public static junit.framework.Test suite() throws Exception {
     Map parameters = new HashMap();
-    parameters.put("basedir","/home/clara-kang/Learning/jenkins-GlobalConfigHistory");
+    parameters.put("basedir","/home/ehenkan/Learning/jenkins-GlobalConfigHistory");
     parameters.put("artifactId","globalConfigHistory");
-    parameters.put("outputDirectory","/home/clara-kang/Learning/jenkins-GlobalConfigHistory/target/classes");
-    parameters.put("testOutputDirectory","/home/clara-kang/Learning/jenkins-GlobalConfigHistory/target/test-classes");
+    parameters.put("outputDirectory","/home/ehenkan/Learning/jenkins-GlobalConfigHistory/target/classes");
+    parameters.put("testOutputDirectory","/home/ehenkan/Learning/jenkins-GlobalConfigHistory/target/test-classes");
     parameters.put("requirePI","false");
     return new org.jvnet.hudson.test.PluginAutomaticTestBuilder().build(parameters);
   }

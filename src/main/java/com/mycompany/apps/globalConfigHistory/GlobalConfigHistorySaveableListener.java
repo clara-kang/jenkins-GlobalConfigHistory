@@ -17,9 +17,10 @@ import java.util.logging.Logger;
 @Extension
 public class GlobalConfigHistorySaveableListener extends SaveableListener{
 
-    final GlobalConfigHistory plugin = Jenkins.getInstance().getPlugin(GlobalConfigHistory.class);
-    FileHistoryDao historyDao = new FileHistoryDao(plugin.getRootDir(), new File(Jenkins.getInstance().root.getPath()));
-    //private final File jenkinsHome = new File(Jenkins.getInstance().root.getPath());
+
+
+    final GlobalConfigHistory plugin = getPlugin();
+    final FileHistoryDao historyDao = getHistoryDao(plugin);
 
     private static final Logger LOG = Logger.getLogger(GlobalConfigHistorySaveableListener.class.getName());
 
@@ -31,4 +32,21 @@ public class GlobalConfigHistorySaveableListener extends SaveableListener{
         }
     }
 
+    /**
+     * for tests only
+     *
+     * @return plugin
+     */
+    GlobalConfigHistory getPlugin() {
+        return PluginUtils.getPlugin();
+    }
+
+    /**
+     * for tests only
+     *
+     * @return historyDao
+     */
+    FileHistoryDao getHistoryDao(GlobalConfigHistory plugin) {
+        return PluginUtils.getHistoryDao(plugin);
+    }
 }

@@ -23,9 +23,5 @@ public class GlobalConfigHistory extends Plugin {
         return rootDir;
     }
 
-    boolean isSaveable(final Saveable item){
-        return item instanceof TopLevelItem;
-    }
-
 }
 
