@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.mycompany.apps.globalConfigHistory.FileHistoryDaoTest" time="1.476" tests="5" errors="0" skipped="0" failures="0">
+<testsuite name="com.mycompany.apps.globalConfigHistory.GlobalConfigHistorySaveableListenerTest" time="0.958" tests="1" errors="1" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64"/>
@@ -58,9 +58,10 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testCheckForDuplicates" classname="com.mycompany.apps.globalConfigHistory.FileHistoryDaoTest" time="1.463"/>
-  <testcase name="testSaveItem" classname="com.mycompany.apps.globalConfigHistory.FileHistoryDaoTest" time="0.008"/>
-  <testcase name="testGetHistoryDir" classname="com.mycompany.apps.globalConfigHistory.FileHistoryDaoTest" time="0.001"/>
-  <testcase name="testCopyConfigFile" classname="com.mycompany.apps.globalConfigHistory.FileHistoryDaoTest" time="0.004"/>
-  <testcase name="testGetRootDir" classname="com.mycompany.apps.globalConfigHistory.FileHistoryDaoTest" time="0"/>
+  <testcase name="testOnChange" classname="com.mycompany.apps.globalConfigHistory.GlobalConfigHistorySaveableListenerTest" time="0.958">
+    <error type="java.lang.NullPointerException:"><![CDATA[java.lang.NullPointerException: null
+	at com.mycompany.apps.globalConfigHistory.GlobalConfigHistorySaveableListener.<init>(GlobalConfigHistorySaveableListener.java:20)
+	at com.mycompany.apps.globalConfigHistory.GlobalConfigHistorySaveableListenerTest.testOnChange(GlobalConfigHistorySaveableListenerTest.java:17)
+]]></error>
+  </testcase>
 </testsuite>

@@ -21,7 +21,7 @@ public class GlobalConfigHistorySaveableListener extends SaveableListener{
     FileHistoryDao historyDao = new FileHistoryDao(plugin.getRootDir(), new File(Jenkins.getInstance().root.getPath()));
     //private final File jenkinsHome = new File(Jenkins.getInstance().root.getPath());
 
-    private static final Logger LOG = Logger.getLogger(GlobalConfigHistory.class.getName());
+    private static final Logger LOG = Logger.getLogger(GlobalConfigHistorySaveableListener.class.getName());
 
     @Override
     public void onChange(final Saveable o, final XmlFile file){
@@ -29,15 +29,6 @@ public class GlobalConfigHistorySaveableListener extends SaveableListener{
             final String fileName = file.getFile().getName();
             LOG.log(Level.FINEST, fileName + " has been changed");
         }
-        /*final File configFile = file.getFile();
-        final String configRootDir = configFile.getParent();
-        final String hudsonRootDir = jenkinsHome.getPath();
-
-        if(configRootDir.equals(hudsonRootDir)){
-            final String fileName = configFile.getName();
-            LOG.log(Level.FINEST, fileName + " has been changed");
-        }*/
-
     }
 
 }

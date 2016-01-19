@@ -29,8 +29,6 @@ public class FileHistoryDaoTest {
 
     @Before
     public void setFields(){
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-
         testDirectory = new File(getClass().getResource(FILE_PATH).getFile());
         jenkinsHome = testDirectory;
         historyRoot = new File(testDirectory, "my-config-history");
@@ -54,7 +52,7 @@ public class FileHistoryDaoTest {
         File result = dao.getRootDir(testConfig);
         assertEquals(testHistory,result);
         assertTrue(result.exists());
-        assertThat(result.getPath(), containsString("my-config-history" + File.separator + "first.middle.last"));
+        assertTrue(result.getPath().contains("my-config-history" + File.separator + "first.middle.last"));
     }
 
     @Test

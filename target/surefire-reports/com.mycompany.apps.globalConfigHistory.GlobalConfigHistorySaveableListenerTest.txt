@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.apps.globalConfigHistory.GlobalConfigHistorySaveableListenerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.637 sec <<< FAILURE! - in com.mycompany.apps.globalConfigHistory.GlobalConfigHistorySaveableListenerTest
+testOnChange(com.mycompany.apps.globalConfigHistory.GlobalConfigHistorySaveableListenerTest)  Time elapsed: 0.958 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.mycompany.apps.globalConfigHistory.GlobalConfigHistorySaveableListener.<init>(GlobalConfigHistorySaveableListener.java:20)
+	at com.mycompany.apps.globalConfigHistory.GlobalConfigHistorySaveableListenerTest.testOnChange(GlobalConfigHistorySaveableListenerTest.java:17)
+

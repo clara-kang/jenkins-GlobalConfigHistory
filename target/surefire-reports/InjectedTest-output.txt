@@ -1,78 +1,52 @@
 Picking up existing exploded jenkins.war at /home/clara-kang/Learning/jenkins-GlobalConfigHistory/./target/jenkins-for-test
-Jan 19, 2016 1:56:47 AM org.mortbay.log.Slf4jLog info
+Jan 19, 2016 2:48:08 AM org.mortbay.log.Slf4jLog info
 INFO: Logging to org.slf4j.impl.JDK14LoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
-Jan 19, 2016 1:56:47 AM org.mortbay.log.Slf4jLog info
+Jan 19, 2016 2:48:08 AM org.mortbay.log.Slf4jLog info
 INFO: jetty-6.1.26
-Jan 19, 2016 1:56:47 AM org.mortbay.log.Slf4jLog info
+Jan 19, 2016 2:48:08 AM org.mortbay.log.Slf4jLog info
 INFO: NO JSP Support for , did not find org.apache.jasper.servlet.JspServlet
-Jan 19, 2016 1:56:48 AM org.mortbay.log.Slf4jLog info
-INFO: Started SocketConnector@0.0.0.0:55370
-Jan 19, 2016 1:56:51 AM jenkins.InitReactorRunner$1 onAttained
+Jan 19, 2016 2:48:08 AM org.mortbay.log.Slf4jLog info
+INFO: Started SocketConnector@0.0.0.0:48547
+Jan 19, 2016 2:48:09 AM jenkins.InitReactorRunner$1 onAttained
 INFO: Started initialization
-Jan 19, 2016 1:57:08 AM jenkins.InitReactorRunner$1 onAttained
+Jan 19, 2016 2:48:18 AM jenkins.InitReactorRunner$1 onAttained
 INFO: Listed all plugins
-Jan 19, 2016 1:57:09 AM jenkins.InitReactorRunner$1 onAttained
+Jan 19, 2016 2:48:19 AM jenkins.InitReactorRunner$1 onAttained
 INFO: Prepared all plugins
-Jan 19, 2016 1:57:10 AM jenkins.InitReactorRunner$1 onAttained
+Jan 19, 2016 2:48:19 AM jenkins.InitReactorRunner$1 onAttained
 INFO: Started all plugins
-Jan 19, 2016 1:57:10 AM jenkins.InitReactorRunner$1 onAttained
+Jan 19, 2016 2:48:20 AM jenkins.InitReactorRunner$1 onAttained
 INFO: Augmented all extensions
-Jan 19, 2016 1:57:10 AM jenkins.InitReactorRunner$1 onAttained
+Jan 19, 2016 2:48:20 AM jenkins.InitReactorRunner$1 onAttained
 INFO: Loaded all jobs
-Jan 19, 2016 1:57:16 AM com.mycompany.apps.globalConfigHistory.FileHistoryDao checkForDuplicate
-WARNING: only 1 file may exist in a directory
-Jan 19, 2016 1:57:21 AM com.mycompany.apps.globalConfigHistory.FileHistoryDao checkForDuplicate
-WARNING: only 1 file may exist in a directory
-Jan 19, 2016 1:57:21 AM jenkins.InitReactorRunner$1 onAttained
+Jan 19, 2016 2:48:33 AM jenkins.InitReactorRunner$1 onAttained
 INFO: Completed initialization
-Jan 19, 2016 1:57:22 AM com.mycompany.apps.globalConfigHistory.FileHistoryDao checkForDuplicate
-WARNING: only 1 file may exist in a directory
-Jan 19, 2016 1:57:22 AM com.mycompany.apps.globalConfigHistory.FileHistoryDao checkForDuplicate
-WARNING: only 1 file may exist in a directory
-Jan 19, 2016 1:57:22 AM com.mycompany.apps.globalConfigHistory.FileHistoryDao checkForDuplicate
-WARNING: only 1 file may exist in a directory
-Jan 19, 2016 1:57:22 AM org.mortbay.log.Slf4jLog info
+Jan 19, 2016 2:48:34 AM org.mortbay.log.Slf4jLog info
 INFO: jetty-6.1.26
-Jan 19, 2016 1:57:22 AM org.mortbay.log.Slf4jLog info
-INFO: Started SocketConnector@0.0.0.0:34764
-Jan 19, 2016 1:57:22 AM com.mycompany.apps.globalConfigHistory.FileHistoryDao checkForDuplicate
-WARNING: only 1 file may exist in a directory
-Jan 19, 2016 1:57:29 AM org.mortbay.log.Slf4jLog info
-INFO: Stopped SocketConnector@0.0.0.0:55370
-Jan 19, 2016 1:57:30 AM com.mycompany.apps.globalConfigHistory.FileHistoryDao checkForDuplicate
-WARNING: only 1 file may exist in a directory
-Jan 19, 2016 1:57:30 AM org.mortbay.log.Slf4jLog info
+Jan 19, 2016 2:48:34 AM org.mortbay.log.Slf4jLog info
+INFO: Started SocketConnector@0.0.0.0:55542
+Jan 19, 2016 2:48:38 AM org.mortbay.log.Slf4jLog info
+INFO: Stopped SocketConnector@0.0.0.0:48547
+Jan 19, 2016 2:48:38 AM org.mortbay.log.Slf4jLog info
 INFO: jetty-6.1.26
-Jan 19, 2016 1:57:30 AM org.mortbay.log.Slf4jLog info
+Jan 19, 2016 2:48:38 AM org.mortbay.log.Slf4jLog info
 INFO: NO JSP Support for , did not find org.apache.jasper.servlet.JspServlet
-Jan 19, 2016 1:57:30 AM org.mortbay.log.Slf4jLog info
-INFO: Started SocketConnector@0.0.0.0:40805
-Jan 19, 2016 1:57:30 AM jenkins.InitReactorRunner$1 onAttained
+Jan 19, 2016 2:48:38 AM org.mortbay.log.Slf4jLog info
+INFO: Started SocketConnector@0.0.0.0:49252
+Jan 19, 2016 2:48:38 AM jenkins.InitReactorRunner$1 onAttained
 INFO: Started initialization
-Jan 19, 2016 1:57:30 AM jenkins.InitReactorRunner$1 onAttained
+Jan 19, 2016 2:48:38 AM jenkins.InitReactorRunner$1 onAttained
 INFO: Listed all plugins
-Jan 19, 2016 1:57:30 AM jenkins.InitReactorRunner$1 onAttained
+Jan 19, 2016 2:48:38 AM jenkins.InitReactorRunner$1 onAttained
 INFO: Prepared all plugins
-Jan 19, 2016 1:57:30 AM jenkins.InitReactorRunner$1 onAttained
+Jan 19, 2016 2:48:38 AM jenkins.InitReactorRunner$1 onAttained
 INFO: Started all plugins
-Jan 19, 2016 1:57:30 AM jenkins.InitReactorRunner$1 onAttained
+Jan 19, 2016 2:48:38 AM jenkins.InitReactorRunner$1 onAttained
 INFO: Augmented all extensions
-Jan 19, 2016 1:57:30 AM jenkins.InitReactorRunner$1 onAttained
+Jan 19, 2016 2:48:38 AM jenkins.InitReactorRunner$1 onAttained
 INFO: Loaded all jobs
-Jan 19, 2016 1:57:31 AM com.mycompany.apps.globalConfigHistory.FileHistoryDao checkForDuplicate
-WARNING: only 1 file may exist in a directory
-Jan 19, 2016 1:57:32 AM jenkins.InitReactorRunner$1 onAttained
+Jan 19, 2016 2:48:39 AM jenkins.InitReactorRunner$1 onAttained
 INFO: Completed initialization
-Jan 19, 2016 1:57:32 AM com.mycompany.apps.globalConfigHistory.FileHistoryDao checkForDuplicate
-WARNING: only 1 file may exist in a directory
-Jan 19, 2016 1:57:32 AM com.mycompany.apps.globalConfigHistory.FileHistoryDao checkForDuplicate
-WARNING: only 1 file may exist in a directory
-Jan 19, 2016 1:57:32 AM com.mycompany.apps.globalConfigHistory.FileHistoryDao checkForDuplicate
-WARNING: only 1 file may exist in a directory
-Jan 19, 2016 1:57:32 AM com.mycompany.apps.globalConfigHistory.FileHistoryDao checkForDuplicate
-WARNING: only 1 file may exist in a directory
 === Starting CliSanityTest.testCliSanity
-Jan 19, 2016 1:57:32 AM org.mortbay.log.Slf4jLog info
-INFO: Stopped SocketConnector@0.0.0.0:40805
-Jan 19, 2016 1:57:32 AM com.mycompany.apps.globalConfigHistory.FileHistoryDao checkForDuplicate
-WARNING: only 1 file may exist in a directory
+Jan 19, 2016 2:48:39 AM org.mortbay.log.Slf4jLog info
+INFO: Stopped SocketConnector@0.0.0.0:49252

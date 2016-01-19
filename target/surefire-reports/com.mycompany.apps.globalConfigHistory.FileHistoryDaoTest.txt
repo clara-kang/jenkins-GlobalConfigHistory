@@ -1,11 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.mycompany.apps.globalConfigHistory.FileHistoryDaoTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.432 sec <<< FAILURE! - in com.mycompany.apps.globalConfigHistory.FileHistoryDaoTest
-testSaveItem(com.mycompany.apps.globalConfigHistory.FileHistoryDaoTest)  Time elapsed: 0.189 sec  <<< FAILURE!
-java.lang.AssertionError: null
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertTrue(Assert.java:52)
-	at com.mycompany.apps.globalConfigHistory.FileHistoryDaoTest.testSaveItem(FileHistoryDaoTest.java:83)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.755 sec - in com.mycompany.apps.globalConfigHistory.FileHistoryDaoTest
