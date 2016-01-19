@@ -46,6 +46,7 @@ public class FileHistoryDaoTest {
         final File configFile = testConfig.getFile();
         File result = dao.getHistoryDir(configFile);
         assertEquals(testHistory,result);
+        assertTrue(result.exists());
     }
 
     @Test
@@ -75,9 +76,11 @@ public class FileHistoryDaoTest {
         assertEquals(true,result2);
     }
 
- /*   @Test
+    @Test
     public void testSaveItem(){
-
-    }*/
+        dao.saveItem(testConfig);
+        final File result = new File(testHistory, testConfig.getFile().getName());
+        assertTrue(result.exists());
+    }
 
 }

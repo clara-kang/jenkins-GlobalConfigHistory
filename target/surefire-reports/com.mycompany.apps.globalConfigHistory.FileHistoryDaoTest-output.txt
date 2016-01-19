@@ -1,0 +1,2 @@
+Jan 19, 2016 1:56:40 AM com.mycompany.apps.globalConfigHistory.FileHistoryDao checkForDuplicate
+WARNING: only 1 file may exist in a directory

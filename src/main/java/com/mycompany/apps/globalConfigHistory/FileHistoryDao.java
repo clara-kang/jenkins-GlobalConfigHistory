@@ -76,7 +76,7 @@ public class FileHistoryDao extends GlobalConfigHistoryStrategy{
 
     boolean checkForDuplicate(final XmlFile currentConfig, final File directory){
 
-        if(directory.listFiles() == null){
+        if(directory.listFiles() == null || directory.listFiles().length == 0){
             return true;
         }
         else if(directory.listFiles().length == 1){
